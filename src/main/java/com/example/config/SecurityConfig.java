@@ -41,11 +41,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		
-		// ログイン不要ページ
+		// ログイン不要ページの設定
 		http
 			.authorizeRequests()
 			.antMatchers("/login").permitAll() // 直リンクOK
 			.antMatchers("/user/signup").permitAll() // 直リンクOK
+			.antMatchers("/admin").hasAuthority("ROLE_ADMIN") // 権限制御
 			.anyRequest().authenticated(); // それ以外は直リンクNG
 		
 		// ログイン処理
