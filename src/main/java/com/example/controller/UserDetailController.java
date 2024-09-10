@@ -68,7 +68,7 @@ public class UserDetailController {
 	public String deleteUser(UserDetailForm form, Model model) {
 		
 		// ユーザーを削除
-		userService.deleteOne(form.getUserId());
+		userService.deleteUserOne(form.getUserId());
 		
 		// ユーザー一覧画面にリダイレクト
 		return "redirect:/user/list";
