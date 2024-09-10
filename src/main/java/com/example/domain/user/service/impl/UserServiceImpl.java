@@ -64,7 +64,7 @@ public class UserServiceImpl implements UserService {
 	
 	/** ユーザー削除(1件) */
 	@Override
-	public void deleteOne(String userId) {
+	public void deleteUserOne(String userId) {
 		int count = mapper.deleteOne(userId);
 	}
 	

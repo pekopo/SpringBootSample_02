@@ -21,7 +21,7 @@ public interface UserService {
 			String userName);
 	
 	/** ユーザー削除(1件) */
-	public void deleteOne(String userId);
+	public void deleteUserOne(String userId);
 	
 	/** ログインユーザー情報取得 */
 	public MUser getLoginUser(String userId);
